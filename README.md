@@ -1,7 +1,11 @@
 # shaderception-standalone
 
-Run shaderception compiler outside of unity
+Run shaderception compiler outside of unity.
 
-Requires dotnet core, `dotnet core run`
+Setup:
+- Install dotnet core
+- Clone repo
+- `git submodule update --init --recursive`
+- `dotnet run <file to compile>`
 
-Pass a file as first argument to program to receive binary
+Will return 2 files, a `.bin` and `.asm`. `.bin` is the compiled binary, `.asm` is the binary in mnemonic (readable) format.
