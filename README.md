@@ -1,6 +1,6 @@
 # shaderception-standalone
 
-Run shaderception compiler outside of unity.
+Run [Shaderception](https://github.com/pema99/Shaderception) compiler outside of unity.
 
 Setup:
 - Install dotnet core
