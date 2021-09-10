@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <EnableDefaultItems>false</EnableDefaultItems>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Program.cs"/>
+    <Compile Include="Stub.cs"/>
+    <Compile Include="shaderception/Assets/FuncWorld/Code/Compiler.cs"/>
+  </ItemGroup>
+
+</Project>

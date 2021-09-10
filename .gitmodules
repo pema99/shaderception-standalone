@@ -1,0 +1,3 @@
+[submodule "shaderception"]
+	path = shaderception
+	url = https://github.com/pema99/shaderception
