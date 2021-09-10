@@ -70,7 +70,27 @@ namespace UnityEngine
 
     public class Material
     {
-        public void SetVectorArray(string a, Vector4[] b) {}
+        public int idx = 0;
+        public byte[] binary;
+
+        public void SetVectorArray(string a, Vector4[] b)
+        {
+            if (binary == null)
+                binary = new byte[b.Length * 16 * 4];
+            
+            for (int i = 0; i < b.Length; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    byte[] flt = BitConverter.GetBytes(b[i][j]);
+                    binary[idx + i * 16 + j * 4 + 0] = flt[0];
+                    binary[idx + i * 16 + j * 4 + 1] = flt[1];
+                    binary[idx + i * 16 + j * 4 + 2] = flt[2];
+                    binary[idx + i * 16 + j * 4 + 3] = flt[3];
+                }
+            }
+            idx += b.Length;
+        }
         public void SetVector(string a, Vector4 b) {}
     }
 }

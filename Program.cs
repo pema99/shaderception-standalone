@@ -24,8 +24,9 @@ namespace shaderception_standalone
             compiler.Compile();
 
             // Dump output
-            Console.WriteLine(compiler.output.text);
-            File.WriteAllText(args[0] + ".out", compiler.output.text);
+            //Console.WriteLine(compiler.output.text);
+            File.WriteAllText(args[0] + ".asm", compiler.output.text);
+            File.WriteAllBytes(args[0] + ".bin", compiler.screenMat.binary);
         }
     }
 }
